@@ -1,5 +1,7 @@
 import mongoose, { Schema, model, Model } from 'mongoose';
 import { IProduct } from '../interfaces';
+import { title } from 'process';
+import { text } from 'stream/consumers';
 
 const productSchema = new Schema(
   {
@@ -40,6 +42,7 @@ const productSchema = new Schema(
     timestamps: true,
   }
 );
+productSchema.index({title:'text', tags:'text'});
 
 
 
