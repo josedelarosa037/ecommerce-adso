@@ -1,8 +1,11 @@
 services:
   ecommercedb:
-    image: mongo
+    image: mongo:4.4.6
     container_name: ecommerce-database
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
     ports:
       - 27017:27017
-    volumes:
-      - ./mongo:/data/db
+    # volumes:
+    #   - ./mongo:/data/db
