@@ -47,6 +47,12 @@ export const Navbar = () => {
         <Button>
           Menu
         </Button>
+
+        <NextLink href="/auth/login">
+          <Button>
+            Login
+          </Button>
+        </NextLink>
       </Toolbar>
     </AppBar>
   )
